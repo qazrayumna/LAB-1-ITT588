@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home - ITT588</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+  <!-- Background Card -->
+  <div class="home-card">
+    <div class="success-icon">✓</div>
+    <h1>LOGIN SUCCESSFUL!</h1>
+
+    <p class="user-info">Welcome, <strong><%= session[:username] %></strong></p>
+    <p class="role-info">Your role is: <span><%= session[:role] %></span></p>
+
+    <div class="logout-wrapper">
+      <%= button_to "Logout", logout_path, method: :delete, class: "btn-logout" %>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+
+/* ==========
+   CSS Login
+   ========== */
+
+/* Import Font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('https://i.pinimg.com/1200x/0a/80/eb/0a80eb6b7743b0fcc1e56456d64cdccc.jpg') no-repeat center center/cover;
+  position: relative;
+  padding: 20px;
+}
+
+/* Sembunyikan tag <br> dalam form */
+form br {
+  display: none;
+}
+
+/* Kad Lutsinar Utama */
+.login-card {
+  background: rgba(255, 255, 255, 0.35); /* Kejelasan ditambah sikit supaya tulisan gelap mudah dibaca */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 370px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Form di dalam kad */
+form {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  width: 100%;
+}
+
+/* Tajuk H1 (Warna Gelap) */
+h1 {
+  text-align: center;
+  color: #0f172a; /* Warna gelap */
+  font-size: 28px;
+  font-weight: 1000;
+  letter-spacing: 0.5px;
+  margin-bottom: 1px;
+  line-height: 1;
+}
+
+/* Sub-tajuk (Warna Gelap) */
+p {
+  text-align: center;
+  color: #334155; 
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Input */
+form div {
+  margin-bottom: 15px;
+}
+
+/* Label Input (Warna Gelap) */
+label {
+  display: block;
+  font-size: 15px;
+  color: #1e293b;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+/* bahagian  input form*/
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 4px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.9); /*line putih*/
+  outline: none;
+  font-size: 15px;
+  color: #0f172a; /* Teks warna gelap */
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-bottom-color: #2563eb;
+}
+
+/* Butang Login */
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  margin-top: 4px;
+}
+
+input[type="submit"]:hover {
+  background-color: #1e293b;
+}
+
+input[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* Mesej Success & Alert (Flash Rails) */
+#success-message {
+  position: absolute;
+  top: 20px;
+  width: 90%;
+  max-width: 400px;
+  z-index: 10;
+}
+
+p[style*="color: red;"] {
+  background-color: rgba(255, 200, 200, 0.9);
+  padding: 10px;
+  border-radius: 6px;
+  color: #721c24 !important;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* ============
+   CSS HomePage
+   ============ */
+
+/* Import Font Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Latar belakang yang sama macam Halaman Login */
+  background: url('https://i.pinimg.com/1200x/0a/80/eb/0a80eb6b7743b0fcc1e56456d64cdccc.jpg') no-repeat center center/cover;
+  padding: 20px;
+}
+
+/* Kad Lutsinar */
+.home-card {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  padding: 30px 25px 28px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Ikon Tanda Right (✓) */
+.success-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #22c55e;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px auto;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+}
+
+/* Tajuk H1 */
+h1 {
+  color: #0f172a;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/* Maklumat Pengguna & Peranan */
+p.user-info, p.role-info {
+  color: #1e293b;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+p strong {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+p span {
+  display: inline-block;
+  background-color: rgba(15, 23, 42, 0.1);
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #0f172a;
+  text-transform: capitalize;
+}
+
+.logout-wrapper {
+  margin-top: 25px;
+}
+
+/* Butang Logout */
+.button_to input[type="submit"],
+.btn-logout {
+  width: 100%;
+  padding: 8px;
+  background-color: #DC143C; /* Warna merah untuk Logout */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.button_to input[type="submit"]:hover,
+.btn-logout:hover {
+  background-color: #800020;
+  transform: translateY(-2px);
+}
+
+.button_to input[type="submit"]:active,
+.btn-logout:active {
+  transform: translateY(0);
+}
+
+/* ===============
+   CSS Popup Mesej
+   =============== */
+
+#success-message, .flash-notice {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 370px;
+  
+  background: rgba(209, 231, 221, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 12px 18px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+}
+
+/* Teks Mesej */
+#success-message span {
+  color: #064e3b; /* Warna hijau gelap kontras dan mudah dibaca */
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+/* Tombol Silang (Close) */
+#success-message button {
+  background: transparent;
+  border: none;
+  color: #064e3b;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  margin-left: 12px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#success-message button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ITT588 Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <% if flash[:notice] %>
+    <div id="success-message" style="
+      background-color: #d1e7dd;
+      color: #0f5132;
+      border: 1px solid #badbcc;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    ">
+      <span><%= flash[:notice] %></span>
+
+      <button
+        type="button"
+        onclick="document.getElementById('success-message').remove()"
+        aria-label="Close message"
+        style="
+          background: none;
+          border: none;
+          color: #0f5132;
+          font-size: 24px;
+          cursor: pointer;
+          margin-left: 15px;
+        ">
+        &times;
+      </button>
+    </div>
+  <% end %>
+
+  <!-- ================================= -->
+  <div class="login-card">
+    <h1>LOGIN PAGE</h1>
+    <p>Please enter your username and password.</p>
+
+    <% if flash[:alert] %>
+      <p style="color: red;"><%= flash[:alert] %></p>
+    <% end %>
+
+    <%= form_with url: login_path, method: :post do |form| %>
+      <div>
+        <%= form.label :username, "username" %><br>
+        <%= form.text_field :username, required: true, autocomplete: "username" %>
+      </div>
+
+      <br>
+
+      <div>
+        <%= form.label :password, "password" %><br>
+        <%= form.password_field :password, required: true, autocomplete: "current-password" %>
+      </div>
+
+      <br>
+
+      <%= form.submit "Login" %>
+    <% end %>
+  </div>
+  <!-- ==================================================== -->
+
+</body>
+</html>
